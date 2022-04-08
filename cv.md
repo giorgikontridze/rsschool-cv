@@ -14,6 +14,8 @@ learning new things from everywhere etc.).
 ___
 ## **Skills**  
 
+* Linux
+* VS Code
 * Git
 * GitHub
 * Markdown
