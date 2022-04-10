@@ -8,11 +8,13 @@ Mob: +995555775579
 [Email](mailto:giorgi.kontridze21@gmail.com) / [LinkedIn](https://www.linkedin.com/in/giorgi-kontridze-20515a184/) / [GitHub](https://github.com/giorgikontridze/)  
 
 ___
+
 ## **Summary**  
 
 At the present moment I am the head of the Geographic Information Systems group at the leading company of telecommunications field in Georgia. My main experience comes into contact with administering Windows, SQL, GIS servers. I’m qualified in document analysis and problem solving in this area. I have always been obsessed in programming and made decision to make an effort at this field. From my personal traits I distinguish purposefulness, the ability to do the job with due diligence and with best quality, and the capability to fulfill  the job at all events. My main target is to become a full stack developer, furthermore I'll do everything possible to achieve this goal. However I guess that working on a real project, is the best way to gain practical experience. I believe I’ll get a chance to express my skills, to obtain relevant knowledge and to become the member of your big family to support you in implementation of projects.
 
 ___
+
 ## **Skills**  
 
 * Linux
@@ -22,7 +24,8 @@ ___
 * Markdown
 * HTML
 * CSS
-* JavaScript
+* JavaScript  
+
 ___
 
 ## **Code Examples**  
@@ -86,7 +89,8 @@ No real project experience
 
 Projects from courses:  
 
-* Brakeout on codeHs.com - [Run Breakout game](https://codehs.com/share/id/write-the-code-3EllXd/run)
+* Brakeout on codeHs.com - [Run Breakout game](https://codehs.com/share/id/write-the-code-3EllXd/run)  
+
 ___
 
 ## **Education**  
@@ -99,5 +103,6 @@ ___
 
 * Georgian: native
 * English: B1
-* Russian: B1
+* Russian: B1  
+
 ___
