@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Giorgi Kontridze</title>
+</head>
+<body>
+    <header class="headre-container">
+        <h1>Giorgi Kontridze</h1>
+        <nav></nav>
+    </header>
+    <main class="main-container">
+        A place for website's main content
+        
+        <section class="summary">
+            <h2>Summary</h2>
+            <p>At the present moment I am the head of the Geographic Information Systems group at the leading company of telecommunications field in Georgia. <br>
+                My main experience comes into contact with administering Windows, SQL, GIS servers. I’m qualified in document analysis and problem solving in this area.<br>
+                I have always been obsessed in programming and made decision to make an effort at this field. From my personal traits I distinguish purposefulness,<br>
+                the ability to do the job with due diligence and with best quality, and the capability to fulfill the job at all events. My main target is to become a full stack developer,<br>
+                furthermore I’ll do everything possible to achieve this goal. However I guess that working on a real project, is the best way to gain practical experience.<br>
+                I believe I’ll get a chance to express my skills, to obtain relevant knowledge and to become the member of your big family to support you in implementation of projects.
+            </p>
+          </section>
+
+          <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>MS SQL</li>
+                <li>Linux</li>
+                <li>VS Code</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Markdown</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+          </section>
+
+          <section class="code-example">
+            <h2>Code Example</h2>
+            <details>
+              <summary>Blinking rectangles (JS)</summary>
+              <pre>
+                <code>
+                    /*  This program devides the canvas into an imaginary grid with rectangles and
+                    *   changes rectangle color on user mouse move.
+                    */
+                    
+                    var NUM_RECTANGLES_ACROSS = 4;
+                    var NUM_RECTANGLES_DOWN = 10;
+                    var RECT_WIDTH = getWidth() / NUM_RECTANGLES_ACROSS;
+                    var RECT_HEIGHT = getHeight() / NUM_RECTANGLES_DOWN;
+                    var transparent = new Color(255, 255, 255, 0.6);
+                    var grid;
+                    var START_X = 0;
+                    var xPosition = START_X;
+                    var yPosition = getHeight() - RECT_HEIGHT;
+                    var element = null;
+                    
+                    function start() {
+                        setTimer(drawGrid, 1);
+                        mouseMoveMethod(blink);
+                    }
+                    
+                    //This function changes the color of rectangle on mouse move
+                    function blink(e){
+                        element = getElementAt(e.getX(), e.getY());
+                        if(element != null){
+                            element.setColor(Randomizer.nextColor());
+                        }
+                    }
+                    
+                    //This function draws grid with rectangles
+                    function drawGrid(){
+                        if(getWidth() - xPosition > 0){
+                            grid = new Rectangle(RECT_WIDTH, RECT_HEIGHT);
+                            grid.setPosition(xPosition, yPosition);
+                            grid.setColor(transparent);
+                            add(grid);
+                            xPosition = xPosition + RECT_WIDTH;
+                        }else if(yPosition > 0){
+                            xPosition = START_X;
+                            yPosition = yPosition - RECT_HEIGHT;
+                        }else{
+                            stopTimer();
+                        }
+                    }
+                </code>
+              </pre>
+            </details>
+          </section>
+
+          <section class="experience">
+            <h2>Experience</h2>
+            <p>No real project experience.</p>
+            <p>Projects from courses:</p>
+                <ul>
+                    <li>Brakeout on codeHs.com - <a href="https://codehs.com/share/id/write-the-code-3EllXd/run">Run Breakout game</a></li>
+                </ul>
+          </section>
+
+          <section class="education">
+            <h2>Education</h2>
+            <ul>
+                <li>CodeHs - Programming foundations</li>
+                <li>Codecademy - Basics of HTML / CSS / JavaScript</li>
+                <li>freeCodeCamp - Responsive Web Design (HTML / CSS)</li>
+            </ul>
+          </section>
+
+          <section class="language">
+            <h2>Language</h2>
+            <ul>
+                <li>Georgian: native</li>
+                <li>English: B1</li>
+                <li>Russian: B1</li>
+            </ul>
+          </section>
+
+    </main>
+    <footer>
+        <a href="default.asp">
+            <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+          </a>
+        https://rs.school/js-en/
+        https://rs.school/js-en/
+    </footer>
+</body>
+</html>
