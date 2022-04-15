@@ -5,154 +5,168 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Giorgi Kontridze</title>
 </head>
-<body>
-    <header>
-        <h1 class="header-container">Giorgi Kontridze</h1>
+<body id="body-container">
+    <header class="row header">
+        <section class="col-3 section-1">
+            <h2 class="hidden">Profile picture</h2>
+            <img id="header-picture" class="img-thumbnail" src="/images/Giorgi_kontridze.jpeg" alt="giorgi kontridze profile pic">
+        </section>
+        
+        <section class="col-9 section-2">
+            <h1 class="row header-container">Giorgi Kontridze</h1>
     
-        <nav class="header-navigation">
-            <a href="#summary">Summary</a>
-            <a href="#skills">Skills</a>
-            <a href="#code-example">Code Example</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-            <a href="#language">Language</a>
-        </nav>
+            <nav class="row header-navigation">
+                <a href="#summary">Summary</a>
+                <a href="#skills">Skills</a>
+                <a href="#code-example">Code Example</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#language">Language</a>
+            </nav>
+        </section>
+        
         
     </header>
 
-    <main class="main-container">
+    <main class="row  main-container">
         
-        <aside class="aside-container">
-            <h2 class="contacts-list">Contacts</h2>
-            <ul>
-                <li></li>
-            </ul>
-
-            <h2 id="skills">Skills</h2>
-            <ul>
-                <li>MS SQL</li>
-                <li>Linux</li>
-                <li>VS Code</li>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>Markdown</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-        </aside>
-
-        <section class="summary">
-            <h2 id="summary">Summary</h2>
-            <p>At the present moment I am the head of the Geographic Information Systems group at the leading company of telecommunications field in Georgia. 
-                My main experience comes into contact with administering Windows, SQL, GIS servers. I’m qualified in document analysis and problem solving in this area. 
-                I have always been obsessed in programming and made decision to make an effort at this field. From my personal traits I distinguish purposefulness, 
-                the ability to do the job with due diligence and with best quality, and the capability to fulfill the job at all events. My main target is to become a full stack developer, 
-                furthermore I’ll do everything possible to achieve this goal. However I guess that working on a real project, is the best way to gain practical experience. 
-                I believe I’ll get a chance to express my skills, to obtain relevant knowledge and to become the member of your big family to support you in implementation of projects.
-            </p>
-          </section>
-
-          <section class="skills">
-            
-          </section>
-
-          <section class="code-example">
-            <h2 id="code-example">Code Example</h2>
-            <details>
-              <summary>Blinking rectangles (JS)</summary>
-              <pre>
-                <code>
-                    /*  This program devides the canvas into an imaginary grid with rectangles and
-                    *   changes rectangle color on user mouse move.
-                    */
-                    
-                    var NUM_RECTANGLES_ACROSS = 4;
-                    var NUM_RECTANGLES_DOWN = 10;
-                    var RECT_WIDTH = getWidth() / NUM_RECTANGLES_ACROSS;
-                    var RECT_HEIGHT = getHeight() / NUM_RECTANGLES_DOWN;
-                    var transparent = new Color(255, 255, 255, 0.6);
-                    var grid;
-                    var START_X = 0;
-                    var xPosition = START_X;
-                    var yPosition = getHeight() - RECT_HEIGHT;
-                    var element = null;
-                    
-                    function start() {
-                        setTimer(drawGrid, 1);
-                        mouseMoveMethod(blink);
-                    }
-                    
-                    //This function changes the color of rectangle on mouse move
-                    function blink(e){
-                        element = getElementAt(e.getX(), e.getY());
-                        if(element != null){
-                            element.setColor(Randomizer.nextColor());
-                        }
-                    }
-                    
-                    //This function draws grid with rectangles
-                    function drawGrid(){
-                        if(getWidth() - xPosition > 0){
-                            grid = new Rectangle(RECT_WIDTH, RECT_HEIGHT);
-                            grid.setPosition(xPosition, yPosition);
-                            grid.setColor(transparent);
-                            add(grid);
-                            xPosition = xPosition + RECT_WIDTH;
-                        }else if(yPosition > 0){
-                            xPosition = START_X;
-                            yPosition = yPosition - RECT_HEIGHT;
-                        }else{
-                            stopTimer();
-                        }
-                    }
-                </code>
-              </pre>
-            </details>
-          </section>
-
-          <section class="experience">
-            <h2 id="experience">Experience</h2>
-            <p>No real project experience.</p>
-            <p>Projects from courses:</p>
+        <aside class="col-3 g-0 sticky-top aside-container">
+            <nav>
+                <h2 class="contacts-list">Contacts</h2>
                 <ul>
-                    <li>Brakeout on codeHs.com - <a href="https://codehs.com/share/id/write-the-code-3EllXd/run" target="_blank">Run Breakout game</a></li>
+                    <li>Location: Georgia, Tbilisi</li>
+                    <li><a href="tel:+995555775579"><i class="fa fa-mobile"></i></a></li>
+                    <li><a href="https://github.com/giorgikontridze" target="_blank"><i class="fa fa-github"></i></a></li>
+                    <li><a href="mailto:giorgi.kontridze21@gmail.com"><i class="fa fa-envelope"></i></a></li>
                 </ul>
-          </section>
 
-          <section class="education">
-            <h2 id="education">Education</h2>
-            <ul>
-                <li>CodeHs - <a href="https://codehs.com/student/3151333/section/273780" target="_blank">Programming foundations</a></li>
-                <li>Codecademy - <a href="https://www.codecademy.com/profiles/kontridze21" target="_blank">Basics of HTML / CSS / JavaScript</a></li>
-                <li>freeCodeCamp - <a href="https://www.freecodecamp.org/giorgikontridze" target="_blank">Responsive Web Design (HTML / CSS)</a></li>
-            </ul>
-          </section>
+                <h2 id="skills">Skills</h2>
+                <ul>
+                    <li>MS SQL</li>
+                    <li>Linux</li>
+                    <li>VS Code</li>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>Markdown</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </nav>
+            
+        </aside>
+        <section class="col-9 g-0 right-container">
+            <h2 class="hidden">Main content</h2>
+            <section class="summary">
+                <h2 id="summary">Summary</h2>
+                <p>At the present moment I am the head of the Geographic Information Systems group at the leading company of telecommunications field in Georgia. 
+                    My main experience comes into contact with administering Windows, SQL, GIS servers. I’m qualified in document analysis and problem solving in this area. 
+                    I have always been obsessed in programming and made decision to make an effort at this field. From my personal traits I distinguish purposefulness, 
+                    the ability to do the job with due diligence and with best quality, and the capability to fulfill the job at all events. My main target is to become a full stack developer, 
+                    furthermore I’ll do everything possible to achieve this goal. However I guess that working on a real project, is the best way to gain practical experience. 
+                    I believe I’ll get a chance to express my skills, to obtain relevant knowledge and to become the member of your big family to support you in implementation of projects.
+                </p>
+            </section>
 
-          <section class="language">
-            <h2 id="language">Language</h2>
-            <ul>
-                <li>Georgian: native</li>
-                <li>English: B1</li>
-                <li>Russian: B1</li>
-            </ul>
-          </section>
+            <section class="experience">
+                <h2 id="experience">Experience</h2>
+                <p>No real project experience.</p>
+                <p>Projects from courses:</p>
+                    <ul>
+                        <li>Brakeout on codeHs.com - <a href="https://codehs.com/share/id/write-the-code-3EllXd/run" target="_blank">Run Breakout game</a></li>
+                    </ul>
+            </section>
 
+            <section class="education">
+                <h2 id="education">Education</h2>
+                <ul>
+                    <li>CodeHs - <a href="https://codehs.com/student/3151333/section/273780" target="_blank">Programming foundations</a></li>
+                    <li>Codecademy - <a href="https://www.codecademy.com/profiles/kontridze21" target="_blank">Basics of HTML / CSS / JavaScript</a></li>
+                    <li>freeCodeCamp - <a href="https://www.freecodecamp.org/giorgikontridze" target="_blank">Responsive Web Design (HTML / CSS)</a></li>
+                </ul>
+            </section>
+
+            <section class="code-example">
+                <h2 id="code-example">Code Example</h2>
+                <details>
+                <summary>Blinking rectangles (JS)</summary>
+                <pre>
+                    <code>
+                        /*  This program devides the canvas into an imaginary 
+                        *   grid with rectangles and changes rectangle color 
+                        *   on user mouse move.
+                        */
+                        
+                        var NUM_RECTANGLES_ACROSS = 4;
+                        var NUM_RECTANGLES_DOWN = 10;
+                        var RECT_WIDTH = getWidth() / NUM_RECTANGLES_ACROSS;
+                        var RECT_HEIGHT = getHeight() / NUM_RECTANGLES_DOWN;
+                        var transparent = new Color(255, 255, 255, 0.6);
+                        var grid;
+                        var START_X = 0;
+                        var xPosition = START_X;
+                        var yPosition = getHeight() - RECT_HEIGHT;
+                        var element = null;
+                        
+                        function start() {
+                            setTimer(drawGrid, 1);
+                            mouseMoveMethod(blink);
+                        }
+                        
+                        //This function changes the color of rectangle on mouse move
+                        function blink(e){
+                            element = getElementAt(e.getX(), e.getY());
+                            if(element != null){
+                                element.setColor(Randomizer.nextColor());
+                            }
+                        }
+                        
+                        //This function draws grid with rectangles
+                        function drawGrid(){
+                            if(getWidth() - xPosition > 0){
+                                grid = new Rectangle(RECT_WIDTH, RECT_HEIGHT);
+                                grid.setPosition(xPosition, yPosition);
+                                grid.setColor(transparent);
+                                add(grid);
+                                xPosition = xPosition + RECT_WIDTH;
+                            }else if(yPosition > 0){
+                                xPosition = START_X;
+                                yPosition = yPosition - RECT_HEIGHT;
+                            }else{
+                                stopTimer();
+                            }
+                        }
+                    </code>
+                </pre>
+                </details>
+            </section>
+
+            <section class="language">
+                <h2 id="language">Language</h2>
+                <ul>
+                    <li>Georgian: native</li>
+                    <li>English: B1</li>
+                    <li>Russian: B1</li>
+                </ul>
+            </section>
+        </section>
     </main>
     <footer class="footer-container">
         
         <a href="https://github.com/giorgikontridze" target="_blank">
-            <img class="footer-logo" src="/images/GitHub-Mark.png" alt="GitHub-Mark" style="width:42px;height:42px;">
+            <img class="footer-logo-github" src="/images/GitHub-Mark.png" alt="GitHub-Mark">
           </a>
         <p><a href="https://app.rs.school/profile#view" target="_blank">Giorgi Kontridze</a><br>
-            <time datetime="2022-04">2022-04</time>
+            <time id="footer-date" datetime="2022-04">2022-04</time>
         </p>
         
 
         <a href="https://rs.school/js-en/" target="_blank">
-            <img class="footer-logo" src="/images/rs_school_js.svg" alt="rs_school_js" style="width:42px;height:42px;">
+            <img class="footer-logo-rs" src="/images/rs_school_js.svg" alt="rs_school_js">
           </a>
     </footer>
 </body>
